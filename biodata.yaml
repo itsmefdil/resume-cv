@@ -5,11 +5,11 @@ personal_info:
   title: "DevOps Engineer"
   photo: "/static/images/image.png"
   email: "fadilah.riczky@gmail.com"
-  phone: "+1 (555) 123-4567"
-  location: "San Francisco, CA"
+  phone: "+137 1234 5678"
+  location: "Yogyakarta, Indonesia"
   linkedin: "https://linkedin.com/in/itsmefdil"
   github: "https://github.com/itsmefdil"
-  website: "https://itsmefdil.dev"
+  website: "https://itsmefdil.my.id"
   summary: "Experienced DevOps Engineer with 5+ years of expertise in cloud infrastructure, CI/CD automation, and container orchestration. Proven track record of improving deployment efficiency and system reliability. Strong focus on Infrastructure as Code and monitoring solutions."
 
 skills:
