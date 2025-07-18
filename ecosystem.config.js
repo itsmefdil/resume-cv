@@ -43,7 +43,7 @@ module.exports = {
             name: 'resume-website-gunicorn',
             script: 'gunicorn',
             args: '--bind 0.0.0.0:5000 --workers 4 --timeout 120 --worker-class sync --worker-connections 1000 --max-requests 1000 --max-requests-jitter 100 --preload app:app',
-            cwd: '/Users/mac/Development/htmx/resume',
+            cwd: './',
             instances: 1,
             exec_mode: 'fork',
             watch: false,
