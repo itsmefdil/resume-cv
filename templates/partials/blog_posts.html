@@ -61,7 +61,8 @@
                     <div class="flex items-center justify-between">
                         <button
                             class="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center space-x-1 transition-colors"
-                            hx-get="/api/blog/{{ post.filename }}" hx-target="#content-area" hx-trigger="click">
+                            hx-get="/api/blog/{{ post.filename }}" hx-target="#content-area" hx-trigger="click"
+                            hx-push-url="/blog/{{ post.filename }}">
                             <span>Read More</span>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
