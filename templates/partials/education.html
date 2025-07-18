@@ -1,0 +1,79 @@
+<div class="animate-fade-in">
+    <div class="bg-white rounded-lg shadow-sm p-8 border">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">Education</h2>
+
+        <div class="space-y-6">
+            {% for edu in data %}
+            <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6 border border-blue-100">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ edu.degree }}</h3>
+                        <p class="text-lg text-blue-600 font-medium mb-1">{{ edu.institution }}</p>
+                        <p class="text-gray-600">Class of {{ edu.year }}</p>
+                        {% if edu.gpa %}
+                        <p class="text-gray-600">GPA: <span class="font-medium">{{ edu.gpa }}</span></p>
+                        {% endif %}
+                    </div>
+
+                    <div class="mt-4 md:mt-0 md:ml-6">
+                        <div class="flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Additional Education Info -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Certifications -->
+            {% if full_data.certifications %}
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    Certifications
+                </h3>
+                <div class="space-y-3">
+                    {% for cert in full_data.certifications %}
+                    <div class="border-l-4 border-blue-500 pl-4">
+                        <h4 class="font-medium text-gray-900">{{ cert.name }}</h4>
+                        <p class="text-sm text-gray-600">{{ cert.issuer }} • {{ cert.year }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Languages -->
+            {% if full_data.languages %}
+            <div class="bg-gray-50 rounded-lg p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <svg class="w-5 h-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.724 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    Languages
+                </h3>
+                <div class="space-y-3">
+                    {% for lang in full_data.languages %}
+                    <div class="flex justify-between items-center">
+                        <span class="font-medium text-gray-900">{{ lang.language }}</span>
+                        <span class="text-sm text-gray-600 bg-blue-100 px-2 py-1 rounded">{{ lang.proficiency }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

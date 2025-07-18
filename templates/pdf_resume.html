@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.personal_info.name }} - Resume</title>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1 style="margin: 0; font-size: 24px; color: #1f2937;">{{ data.personal_info.name }}</h1>
+        <h2 style="margin: 5px 0; font-size: 18px; color: #3b82f6;">{{ data.personal_info.title }}</h2>
+
+        <div class="contact-info" style="margin-top: 10px;">
+            <span>{{ data.personal_info.email }}</span> •
+            <span>{{ data.personal_info.phone }}</span> •
+            <span>{{ data.personal_info.location }}</span>
+            <br>
+            <span>{{ data.personal_info.linkedin }}</span> •
+            <span>{{ data.personal_info.github }}</span>
+            {% if data.personal_info.website %}
+            • <span>{{ data.personal_info.website }}</span>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p style="margin: 0; text-align: justify;">{{ data.personal_info.summary }}</p>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="section">
+        <div class="section-title">Work Experience</div>
+        {% for job in data.experience %}
+        <div class="no-break" style="margin-bottom: 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px;">
+                <div>
+                    <span class="job-title">{{ job.position }}</span>
+                    <span> at </span>
+                    <span class="company">{{ job.company }}</span>
+                </div>
+                <span class="duration">{{ job.duration }}</span>
+            </div>
+            <div style="font-size: 11px; color: #6b7280; margin-bottom: 5px;">{{ job.location }}</div>
+            <ul style="margin: 5px 0;">
+                {% for responsibility in job.responsibilities %}
+                <li>{{ responsibility }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Skills Section -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            {% for skill in data.skills.technical %}
+            <div class="skill-item">{{ skill }}</div>
+            {% endfor %}
+        </div>
+
+        <div style="margin-top: 15px;">
+            <strong>Soft Skills:</strong>
+            {% for skill in data.skills.soft %}{{ skill }}{% if not loop.last %}, {% endif %}{% endfor %}
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        {% for edu in data.education %}
+        <div class="no-break" style="margin-bottom: 10px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <div>
+                    <span class="job-title">{{ edu.degree }}</span>
+                    <br>
+                    <span class="company">{{ edu.institution }}</span>
+                </div>
+                <span class="duration">{{ edu.year }}</span>
+            </div>
+            {% if edu.gpa %}
+            <div style="font-size: 11px; color: #6b7280;">GPA: {{ edu.gpa }}</div>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Projects Section -->
+    <div class="section page-break">
+        <div class="section-title">Featured Projects</div>
+        {% for project in data.projects %}
+        <div class="no-break" style="margin-bottom: 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px;">
+                <span class="job-title">{{ project.name }}</span>
+                {% if project.url %}
+                <span style="font-size: 10px; color: #6b7280;">{{ project.url }}</span>
+                {% endif %}
+            </div>
+            <p style="margin: 5px 0; font-size: 11px;">{{ project.description }}</p>
+            <div style="margin-top: 5px;">
+                <strong style="font-size: 11px;">Technologies:</strong>
+                <span style="font-size: 11px;">{% for tech in project.technologies %}{{ tech }}{% if not loop.last %},
+                    {% endif %}{% endfor %}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Certifications Section -->
+    {% if data.certifications %}
+    <div class="section">
+        <div class="section-title">Certifications</div>
+        {% for cert in data.certifications %}
+        <div style="margin-bottom: 8px;">
+            <span class="job-title">{{ cert.name }}</span>
+            <br>
+            <span style="font-size: 11px; color: #6b7280;">{{ cert.issuer }} • {{ cert.year }}</span>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- Languages Section -->
+    {% if data.languages %}
+    <div class="section">
+        <div class="section-title">Languages</div>
+        <div style="font-size: 11px;">
+            {% for lang in data.languages %}
+            <span><strong>{{ lang.language }}:</strong> {{ lang.proficiency }}</span>{% if not loop.last %} • {% endif
+            %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Footer -->
+    <div
+        style="position: fixed; bottom: 0; left: 0; right: 0; text-align: center; font-size: 10px; color: #9ca3af; padding: 10px;">
+        Generated on {{ datetime.now().strftime('%B %d, %Y') }}
+    </div>
+</body>
+
+</html>

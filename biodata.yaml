@@ -1,0 +1,129 @@
+personal_info:
+  name: "Fadilah Riczky"
+  username: "Fadil"
+  sosname: "itsmefdil"
+  title: "DevOps Engineer"
+  photo: "/static/images/image.png"
+  email: "fadilah.riczky@gmail.com"
+  phone: "+1 (555) 123-4567"
+  location: "San Francisco, CA"
+  linkedin: "https://linkedin.com/in/itsmefdil"
+  github: "https://github.com/itsmefdil"
+  website: "https://itsmefdil.dev"
+  summary: "Experienced DevOps Engineer with 5+ years of expertise in cloud infrastructure, CI/CD automation, and container orchestration. Proven track record of improving deployment efficiency and system reliability. Strong focus on Infrastructure as Code and monitoring solutions."
+
+skills:
+  technical:
+  - AWS
+  - Azure
+  - Google Cloud Platform
+  - Docker
+  - Kubernetes
+  - Jenkins
+  - GitLab CI/CD
+  - Terraform
+  - Ansible
+  - Prometheus
+  - Grafana
+  - ELK Stack
+  - Python
+  - Bash/Shell Scripting
+  - Linux/Unix
+  - Nginx
+  - Apache
+  - MySQL
+  - PostgreSQL
+  - Redis
+  - Git
+  soft:
+  - Infrastructure Design
+  - Problem Solving
+  - Team Collaboration
+  - Process Automation
+  - Incident Management
+  - Documentation
+
+experience:
+- company: "CloudTech Solutions"
+  position: "Senior DevOps Engineer"
+  duration: "2022 - Present"
+  location: "San Francisco, CA"
+  responsibilities:
+  - "Designed and implemented multi-cloud infrastructure serving 500k+ users across AWS, Azure, and GCP"
+  - "Built automated CI/CD pipelines reducing deployment time from hours to minutes"
+  - "Implemented Infrastructure as Code using Terraform, managing 200+ cloud resources"
+  - "Led incident response team, achieving 99.9% uptime and reducing MTTR by 75%"
+  - "Mentored junior engineers on DevOps best practices and cloud architecture"
+
+- company: "StartupScale"
+  position: "DevOps Engineer"
+  duration: "2020 - 2022"
+  location: "San Francisco, CA"
+  responsibilities:
+  - "Migrated monolithic applications to microservices architecture using Docker and Kubernetes"
+  - "Implemented monitoring and alerting solutions with Prometheus, Grafana, and ELK stack"
+  - "Automated infrastructure provisioning reducing manual setup time by 90%"
+  - "Established security best practices including vulnerability scanning and compliance auditing"
+  - "Collaborated with development teams to optimize application performance and scalability"
+
+- company: "TechOps Inc"
+  position: "Junior DevOps Engineer"
+  duration: "2019 - 2020"
+  location: "San Francisco, CA"
+  responsibilities:
+  - "Maintained and optimized Linux-based production environments"
+  - "Developed automation scripts using Python and Bash for routine operational tasks"
+  - "Assisted in implementing backup and disaster recovery procedures"
+  - "Supported continuous integration processes using Jenkins and GitLab CI"
+
+education:
+- degree: "Bachelor of Science in Computer Engineering"
+  institution: "University of California, Berkeley"
+  year: "2019"
+  gpa: "3.8/4.0"
+
+projects:
+- name: "Multi-Cloud Infrastructure Platform"
+  description: "Designed and deployed scalable infrastructure across AWS, Azure, and GCP using Terraform and Kubernetes"
+  technologies: [ "Terraform", "Kubernetes", "AWS", "Azure", "GCP", "Helm", "ArgoCD" ]
+  url: "https://github.com/johndoe/multi-cloud-infra"
+
+- name: "CI/CD Pipeline Automation"
+  description: "Built comprehensive CI/CD pipeline with automated testing, security scanning, and deployment"
+  technologies: [ "Jenkins", "GitLab CI", "Docker", "SonarQube", "Trivy", "Ansible" ]
+  url: "https://github.com/johndoe/cicd-pipeline"
+
+- name: "Monitoring and Observability Stack"
+  description: "Implemented full-stack monitoring solution with metrics, logs, and distributed tracing"
+  technologies: [ "Prometheus", "Grafana", "ELK Stack", "Jaeger", "AlertManager" ]
+  url: "https://github.com/johndoe/monitoring-stack"
+
+- name: "Infrastructure Cost Optimization Tool"
+  description: "Developed automated cost optimization tool reducing cloud spending by 40%"
+  technologies: [ "Python", "AWS Cost Explorer API", "Slack API", "Lambda", "CloudWatch" ]
+  url: "https://github.com/johndoe/cost-optimizer"
+
+certifications:
+- name: "AWS Certified DevOps Engineer - Professional"
+  issuer: "Amazon Web Services"
+  year: "2023"
+
+- name: "Certified Kubernetes Administrator (CKA)"
+  issuer: "Cloud Native Computing Foundation"
+  year: "2023"
+
+- name: "HashiCorp Certified: Terraform Associate"
+  issuer: "HashiCorp"
+  year: "2022"
+
+- name: "Google Cloud Professional DevOps Engineer"
+  issuer: "Google Cloud"
+  year: "2022"
+
+languages:
+- language: "English"
+  proficiency: "Native"
+- language: "Spanish"
+  proficiency: "Conversational"
+- language: "French"
+  proficiency: "Basic"

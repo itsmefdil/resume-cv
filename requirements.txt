@@ -1,0 +1,5 @@
+Flask==2.3.3
+PyYAML==6.0.1
+Werkzeug==2.3.7
+weasyprint==61.2
+Pillow==10.0.0
