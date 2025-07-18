@@ -1,6 +1,24 @@
+# Core Flask framework
 Flask==2.3.3
-PyYAML==6.0.1
 Werkzeug==2.3.7
+
+# YAML processing for biodata
+PyYAML==6.0.1
+
+# Markdown processing for blog posts
+python-frontmatter==1.1.0
+Markdown==3.8
+
+# PDF generation
 weasyprint==61.2
+reportlab==4.0.9
+
+# Image processing
 Pillow==10.0.0
+
+# Production WSGI server
 gunicorn==21.2.0
+
+# Optional: Additional Flask extensions (if needed)
+# Flask-Login==0.6.2
+# Flask-WTF==1.1.1
