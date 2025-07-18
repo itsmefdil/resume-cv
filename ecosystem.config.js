@@ -4,7 +4,7 @@ module.exports = {
             name: 'resume-website',
             script: 'app.py',
             interpreter: 'python3',
-            cwd: '/Users/mac/Development/htmx/resume',
+            cwd: './',
             instances: 1,
             exec_mode: 'fork',
             watch: false,
