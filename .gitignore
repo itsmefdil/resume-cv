@@ -63,6 +63,10 @@ nginx/ssl/*.pem
 nginx/ssl/*.key
 nginx/ssl/*.crt
 
+# PM2
+pids/
+.pm2/
+
 # Temporary files
 *.tmp
 *.temp
