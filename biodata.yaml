@@ -35,6 +35,7 @@ skills:
   - PostgreSQL
   - Redis
   - Git
+  - Networking
   soft:
   - Infrastructure Design
   - Problem Solving
